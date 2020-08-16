@@ -1,5 +1,5 @@
 layout: page
-title: "home"
+title: "index"
 permalink: /home/
 
 # Menu
