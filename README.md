@@ -1,4 +1,3 @@
-# spencer741.github.io
+[GO!](https://spencer741.github.io/)
 
 
-Test
