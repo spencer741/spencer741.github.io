@@ -35,9 +35,9 @@ Basic regular expression:
 1) each symbol in the alphabet is a regular expression
 2) empty string is also a regular expression. Epsilon is used to represent an empty string. Epsilon cannot occur in the alphabet.
 
-    L(a) = { a }
+>L(a) = { a }
 
-    L($$\varepsilon$$) = { $$\varepsilon$$ }
+>L($$\varepsilon$$) = { $$\varepsilon$$ }
 
 
 
@@ -47,7 +47,7 @@ There are three operators we can use to constuct more complex regular expression
 
 ---
 
-###1. Choice operator \{ | }
+### 1. Choice operator \{ | }
 
 `r1 | r2` is *also* a regular expression (because `r1` and `r2` are independently regular expressions).
 
@@ -66,7 +66,7 @@ Other examples:
 
 >L(a|a) = { a }  &nbsp;&nbsp;&nbsp;&nbsp;... this can be reduced to just L(a)
 
->L(a|$\epsilon$) = { a,$\epsilon$ } &nbsp;&nbsp;... either a or empty string.
+>L(a|$\epsilon$) = { a,$$\varepsilon$$ } &nbsp;&nbsp;... either a or empty string.
 
 ### 2) Concatenation Operator \{ x }
 `r1r2` is *also* a regular expression (because `r1` and `r2` are independently regular expressions).
@@ -98,20 +98,20 @@ This operator is used to represent the repetition of `r1` as many times as neede
 So does this mean 0 or more times or does it mean 1 or more times?
 The \* operator means 0 or more times.
 
->L(r*) = L($\epsilon$) ... this is just an empty string
+>L(r*) = L($$\varepsilon$$) ... this is just an empty string
 
->L(r*) = L($\epsilon$) U L(r) ... this is one r
+>L(r*) = L($$\varepsilon$$) U L(r) ... this is one r
 
->L(r*) = L($\epsilon$) U L(r) U L(rr) ... this is two or more r's
+>L(r*) = L($$\varepsilon$$) U L(r) U L(rr) ... this is two or more r's
 
->L(a*) = { $\epsilon$,a,aa,aaa,... }
+>L(a*) = { $$\varepsilon$$,a,aa,aaa,... }
 
 If you apply the closure operator to $\epsilon$, it still evaluates to empty string...no matter how many times you repeat it.
 
->L($\epsilon$*) = { $\epsilon$ } 
+>L($$\varepsilon$$*) = { $$\varepsilon$$ } 
 
 More complex example:
->L((a|b)*) = { $\epsilon$ } repeat 0 times
+>L((a|b)*) = { $$\varepsilon$$ } repeat 0 times
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= { a,b } repeat 1 times
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= { aa,bb,ab,ba } repeat 2 times
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= { bbb,bba,bab,baa, } repeat 3 times
@@ -150,12 +150,12 @@ means to repeat at least once.
 >r+ = rr*  (here = means equivalent to)
 
 >L(a+) =  { a,aa,aaa }
->L(a*) = { $\epsilon$ } U L(a+)
+>L(a*) = { $$\varepsilon$$ } U L(a+)
 
 **?**
 means that the preceding pattern can occur zero **or** once
 
->r? = r | $\epsilon$
+>r? = r | $$\varepsilon$$
 
 **.**
 matches any individual symbol in the alphabet (except newline character). It also matches an empty string.
