@@ -53,12 +53,12 @@ There are three operators we can use to constuct more complex regular expression
 
 What is the pattern represented in this regular expression?
 
->L(r1|r2) = L(r1) U L(r2)
+>L(r1\|r2) = L(r1) U L(r2)
 
 If the string matches the pattern of `r1` **OR** the pattern of `r2`,
 then it can be recognized by the entire regular expression.
 
->L(a|b) = { a,b } 
+>L(a\|b) = { a,b } 
 
 Also, the order does not matter. `L(b|a)` is the same as `L(a|b)`.
 
