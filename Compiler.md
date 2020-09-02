@@ -1,3 +1,10 @@
+---
+layout: page
+title: Notes 8/31
+permalink: /compiler/
+---
+
+
 8/31
 Project 1:
 PrintStm::interp(...){
