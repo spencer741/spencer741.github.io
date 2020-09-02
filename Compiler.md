@@ -4,7 +4,6 @@ layout: page
 title: Notes 8/31
 permalink: /compiler/
 ---
-{% include lib/mathjax.html %}
 
 
 8/31
