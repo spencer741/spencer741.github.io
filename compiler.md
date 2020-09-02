@@ -64,9 +64,9 @@ Also, the order does not matter. `L(b|a)` is the same as `L(a|b)`.
 
 Other examples:
 
->L(a|a) = { a }  &nbsp;&nbsp;&nbsp;&nbsp;... this can be reduced to just L(a)
+>L(a\|a) = { a }  &nbsp;&nbsp;&nbsp;&nbsp;... this can be reduced to just L(a)
 
->L(a|$\epsilon$) = { a,$$\varepsilon$$ } &nbsp;&nbsp;... either a or empty string.
+>L(a\|$\epsilon$) = { a,$$\varepsilon$$ } &nbsp;&nbsp;... either a or empty string.
 
 ### 2) Concatenation Operator \{ x }
 `r1r2` is *also* a regular expression (because `r1` and `r2` are independently regular expressions).
@@ -82,12 +82,12 @@ Does the order matter with the Concatenation Operator?
 >L(a$\epsilon$) = { a } ... because (a) followed by an empty string ($\epsilon$) is still (a).
 
 A more complex example...
->L(a(b|c)) = L(a) x L(b|c) = { a } x { b,c } = { ab, ac }
+>L(a(b\|c)) = L(a) x L(b|c) = { a } x { b,c } = { ab, ac }
 
 Can a string be used to recognize the concatentation of two regular expressions?
 Yes. If you are able to parse the string, you can find a way to partiton the string into two parts. If both partitions match, then you have acheived it. If not, you would iterate and test different partitions of the string.
 These are very basic examples:
->a|b|c|d
+>a\|b\|c\|d
 
 >ab can be concatenated with c to make abc. ab can be concatenated with cd to make abcd ...  and so forth. 
 
@@ -111,7 +111,7 @@ If you apply the closure operator to $\epsilon$, it still evaluates to empty str
 >L($$\varepsilon$$*) = { $$\varepsilon$$ } 
 
 More complex example:
->L((a|b)*) = { $$\varepsilon$$ } repeat 0 times
+>L((a\|b)*) = { $$\varepsilon$$ } repeat 0 times
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= { a,b } repeat 1 times
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= { aa,bb,ab,ba } repeat 2 times
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= { bbb,bba,bab,baa, } repeat 3 times
@@ -119,7 +119,7 @@ More complex example:
 In the above example, as long as the string contains a or b, it can be recognized.
 
 Now let's look at another example:
->a|bc* 
+>a\|bc* 
 
 Well, this is not clear ... enter precedence level!
 
@@ -131,11 +131,11 @@ Lowest ------------------------------ Highest
 And of course you can always use parenthesis to change precedence, like you see in mathematical notation.
 
 Thus, the following expression
->a|bc*
+>a\|bc*
 
 can become
 
->a|(b(c*))
+>a\|(b(c*))
 
 This particular expression can recongize `a` or a string that starts with `b` followed by any number of `c`'s.
 
@@ -155,12 +155,12 @@ means to repeat at least once.
 **?**
 means that the preceding pattern can occur zero **or** once
 
->r? = r | $$\varepsilon$$
+>r? = r \| $$\varepsilon$$
 
 **.**
 matches any individual symbol in the alphabet (except newline character). It also matches an empty string.
 
->(a|b|c)* is equivalent to .*
+>(a\|b\|c)* is equivalent to .*
 
 
 
@@ -169,7 +169,7 @@ is an alternative to the choice operator.
 
 Assume `a1 a2 a3 , ... ,` are all symbols in the alphabet.
 
->[a1a2a3a4...an] = a1 | s2 | a3 | ... | an
+>[a1a2a3a4...an] = a1 \| s2 \| a3 \| ... \| an
 
 >L([abc12]) = { a,b,c,1,2 }
 
