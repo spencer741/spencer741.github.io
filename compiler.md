@@ -66,7 +66,7 @@ Other examples:
 
 >L(a\|a) = { a }  &nbsp;&nbsp;&nbsp;&nbsp;... this can be reduced to just L(a)
 
->L(a\|$\epsilon$) = { a,$$\varepsilon$$ } &nbsp;&nbsp;... either a or empty string.
+>L(a\|$$\varepsilon$$) = { a,$$\varepsilon$$ } &nbsp;&nbsp;... either a or empty string.
 
 ### 2) Concatenation Operator \{ x }
 `r1r2` is *also* a regular expression (because `r1` and `r2` are independently regular expressions).
@@ -112,9 +112,9 @@ If you apply the closure operator to $\epsilon$, it still evaluates to empty str
 
 More complex example:
 >L((a\|b)*) = { $$\varepsilon$$ } repeat 0 times
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= { a,b } repeat 1 times
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= { aa,bb,ab,ba } repeat 2 times
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= { bbb,bba,bab,baa, } repeat 3 times
+= { a,b } repeat 1 times
+= { aa,bb,ab,ba } repeat 2 times
+= { bbb,bba,bab,baa, } repeat 3 times
 
 In the above example, as long as the string contains a or b, it can be recognized.
 
@@ -126,7 +126,8 @@ Well, this is not clear ... enter precedence level!
 ### Precedence level
 
 Lowest ------------------------------ Highest
-**choice**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**concatenation**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**repetition**
+
+**choice** **concatenation** **repetition**
 
 And of course you can always use parenthesis to change precedence, like you see in mathematical notation.
 
@@ -199,9 +200,13 @@ Note that you can also assign names to regular expressions to name them via assi
 `\t` tab character
 `" "`: any symbol in within a double quoted string has no special meaning.
 &nbsp;&nbsp;&nbsp;&nbsp;`"a*"` --------> `a*`
+
 &nbsp;&nbsp;&nbsp;&nbsp;`"."`  --------> `.` only recognizes the character . (dot)
+
 &nbsp;&nbsp;&nbsp;&nbsp;`"\t"` --------> Special tab character
+
 &nbsp;&nbsp;&nbsp;&nbsp;`"\\t"` -------> `\t` (this is a string of two characters, not the special tab character)
+
 &nbsp;&nbsp;&nbsp;&nbsp;`"\\\\"` ------> `\\`
 
 ## Exercises
