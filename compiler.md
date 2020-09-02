@@ -35,9 +35,9 @@ Basic regular expression:
 1) each symbol in the alphabet is a regular expression
 2) empty string is also a regular expression. Epsilon is used to represent an empty string. Epsilon cannot occur in the alphabet.
 
->L(a) = { a }
+    L(a) = { a }
 
->L($$\varepsilon$$) = { $\epsilon$ }
+    L($$\varepsilon$$) = { $$\varepsilon$$ }
 
 
 
