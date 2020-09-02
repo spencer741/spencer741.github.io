@@ -210,3 +210,4 @@ Write a regular expression to satisfy the following:
 Q: All strings of lowercase letters that begin and end in a.
 A: `a[a-z]*a | a`
 
+{% include lib/mathjax.html %}
