@@ -37,7 +37,7 @@ Basic regular expression:
 
 >L(a) = { a }
 
->L($$\epsilon$$) = { $\epsilon$ }
+>L($$\varepsilon$$) = { $\epsilon$ }
 
 
 
