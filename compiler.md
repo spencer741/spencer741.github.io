@@ -79,10 +79,10 @@ Does the order matter with the Concatenation Operator?
 
 >L(ab) = L(a) x L(b) ... { a } x { b } ... {ab}
 
->L(a$\epsilon$) = { a } ... because (a) followed by an empty string ($\epsilon$) is still (a).
+>L(a$$\varepsilon$$) = { a } ... because (a) followed by an empty string ($$\varepsilon$$) is still (a).
 
 A more complex example...
->L(a(b\|c)) = L(a) x L(b|c) = { a } x { b,c } = { ab, ac }
+>L(a(b\|c)) = L(a) x L(b\|c) = { a } x { b,c } = { ab, ac }
 
 Can a string be used to recognize the concatentation of two regular expressions?
 Yes. If you are able to parse the string, you can find a way to partiton the string into two parts. If both partitions match, then you have acheived it. If not, you would iterate and test different partitions of the string.
