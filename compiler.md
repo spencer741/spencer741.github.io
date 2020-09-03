@@ -1,28 +1,13 @@
-
 ---
+
 layout: page
 title: Notes 8/31
 permalink: /compiler/
+
 ---
 
 
-8/31
-Project 1:
-PrintStm::interp(...){
-    call the interp of the explist object
-}
-
-PairExpList::interp(...){
-    evaluate head and output the return value
-    call interp function through tail
-}
-
-LastExpList::interp(...){
-    evaluate head and ouput the return value
-}
-
-all of the values of the expression list should be outputted on the same line ...
-
+# 8/31 Compiler Notes
 
 ## Regular expressions
     a regular expression represents a string pattern
