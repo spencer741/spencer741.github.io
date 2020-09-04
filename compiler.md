@@ -169,7 +169,7 @@ If put as the first character within `[ ]`, it means **complement**.
 [^a1a2a3...an]: matches any individual symbol that is not listed in here explicitly.
 
 If the alphabet is 
-> $\sum$ = {a,b,c,d,e}
+> $$\sum$$ = {a,b,c,d,e}
 
 >L([^abc]) = {d,e} any symbol other than a,b or c
 
