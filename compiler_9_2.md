@@ -1,7 +1,15 @@
-Exercises
-All strings of lowercase letters that either begin or end in a (or both)
+---
 
-a[a-z]* | [a-z]*a
+title: Notes 9/2
+permalink: /compiler/9_2
+
+---
+
+# Regular Expressions Cont'd
+
+## Exercises
+All strings of lowercase letters that either begin or end in a (or both)
+>a[a-z]* | [a-z]*a
 
 
 All strings of digits that contain no leading zeros.
