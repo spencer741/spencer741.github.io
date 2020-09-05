@@ -24,7 +24,7 @@ All strings of digits that represent even numbers and no leading zeros
 > [1-9][0-9]* [02468] \| 02468
 
 All strings of digits such that all the 2's occur before all the 9's
-> [0-8]*[013-9]*
+> [0-8]\*[013-9]\*
 
 All strings of a's and b's that contain no three consecutive b's.
 > (b\|bb)?(a\|ab\|abb)*
