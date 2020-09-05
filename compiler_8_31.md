@@ -90,7 +90,7 @@ The \* operator means 0 or more times.
 
 >L(a*) = { $$\varepsilon$$,a,aa,aaa,... }
 
-If you apply the closure operator to $\epsilon$, it still evaluates to empty string...no matter how many times you repeat it.
+If you apply the closure operator to $$\epsilon$$, it still evaluates to empty string...no matter how many times you repeat it.
 
 >L($$\varepsilon$$*) = { $$\varepsilon$$ } 
 
@@ -166,7 +166,8 @@ represents range if used within `[ ]`
 
 **^**
 If put as the first character within `[ ]`, it means **complement**.
-[^a1a2a3...an]: matches any individual symbol that is not listed in here explicitly.
+
+>[^a1a2a3...an] matches any individual symbol that is not listed in here explicitly.
 
 If the alphabet is 
 > $$\sum$$ = {a,b,c,d,e}
@@ -175,7 +176,7 @@ If the alphabet is
 
 >[^jane].* any string of letters that does not start with jane.
 
-**Remember...** epsilon $\epsilon$ is never part of any alphabet.
+**Remember...** epsilon $$\varepsilon$$ is never part of any alphabet.
 
 Note that you can also assign names to regular expressions to name them via assignment or reference them in other regular expressions.
 
@@ -196,8 +197,9 @@ Note that you can also assign names to regular expressions to name them via assi
 ## Exercises
 Write a regular expression to satisfy the following:
 
-Q: All strings of lowercase letters that begin and end in a.
-A: `a[a-z]*a | a`
+**Q:** All strings of lowercase letters that begin and end in a.
+
+**A:** `a[a-z]*a | a`
 
 {% include lib/mathjax.html %}
 
