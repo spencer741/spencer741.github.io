@@ -15,7 +15,7 @@ All strings of lowercase letters that either begin or end in a (or both)
 
 
 All strings of digits that contain no leading zeros.
-> 0 \| [1-9]*[0-9]*
+> 0 \| [1-9]\*[0-9]\*
 
 All strings of digits that represent even numbers and no leading zeros
 
