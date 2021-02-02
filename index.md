@@ -1,2 +1,2 @@
 # Menu
- * [Articles](/testpage/) <br/>
+ * [Articles](/test/) <br/>
